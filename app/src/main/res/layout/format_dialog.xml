@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"
+        android:layout_height="wrap_content"
+        android:text="Choose Option" />
+
+    <Button
+        android:id="@+id/btnUpdateData"
+        android:layout_width="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="?selectableItemBackground"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:text="Update Data"
+        android:layout_gravity="start" />
+
+    <Button
+        android:id="@+id/btnHapusData"
+        android:layout_width="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="?selectableItemBackground"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:text="Hapus Data"
+        android:layout_gravity="start" />
+
+
+</LinearLayout>
