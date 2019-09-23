@@ -91,6 +91,8 @@ public class DialogJava extends DialogFragment implements View.OnClickListener{
                         Bundle args = getArguments();
                         Toast.makeText(getContext(),"Data "+args.getString("judul")+" sukses dihapus",Toast.LENGTH_SHORT).show();
                         k.delete(args.getString("id"));
+                        startActivity(new Intent(getContext(), MainActivity.class));
+                        k.selectUserData();
                         dismiss();
                         break;
 

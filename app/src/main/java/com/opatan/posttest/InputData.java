@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -51,6 +52,7 @@ public class InputData extends AppCompatActivity {
                     k.insert(m);
                     InputData.super.onBackPressed();
                     Toast.makeText(getApplicationContext(),"Data "+judul_data+" Masuk", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
                     k.selectUserData();
                 }
             }

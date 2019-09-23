@@ -68,6 +68,8 @@ public class UpdateData extends AppCompatActivity {
                     k.update(dataPostingan);
                     UpdateData.super.onBackPressed();
                     Toast.makeText(getApplicationContext(),"Data "+ judul_data +" Diubah", Toast.LENGTH_SHORT).show();
+                    k.selectUserData();
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 }
             }
         });
@@ -103,6 +105,7 @@ public class UpdateData extends AppCompatActivity {
                                 Intent jaja = getIntent();
                                 Toast.makeText(getApplicationContext(),"Data "+jaja.getStringExtra("judul")+" sukses dihapus",Toast.LENGTH_SHORT).show();
                                 k.delete(jaja.getStringExtra("id"));
+                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
                                 break;
 
                             case DialogInterface.BUTTON_NEGATIVE:
@@ -112,7 +115,7 @@ public class UpdateData extends AppCompatActivity {
                     }
                 };
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setMessage("Yakin Akan Menghapus?")
                         .setPositiveButton("Ya", dialogClickListener)
                         .setNegativeButton("Tidak", dialogClickListener)
